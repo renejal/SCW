@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DOMINIO\clsCliente.cs" />
+    <Compile Include="PRESENTACION\clsControl.cs" />
     <Compile Include="PRESENTACION\index.cs">
       <SubType>Form</SubType>
     </Compile>

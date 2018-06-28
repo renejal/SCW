@@ -30,16 +30,17 @@
         {
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tpg_control = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tpg_Nuevo = new System.Windows.Forms.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbel = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.navegador = new System.Windows.Forms.WebBrowser();
             this.tabControl.SuspendLayout();
             this.tpg_control.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +71,42 @@
             this.tpg_control.TabIndex = 0;
             this.tpg_control.Text = "Control";
             // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(609, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 21);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Restante";
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(432, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 21);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Tiempo";
+            // 
+            // lbel
+            // 
+            this.lbel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbel.Location = new System.Drawing.Point(272, 13);
+            this.lbel.Name = "lbel";
+            this.lbel.Size = new System.Drawing.Size(74, 21);
+            this.lbel.TabIndex = 1;
+            this.lbel.Text = "Comenzar";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(18, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nombre";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
@@ -83,6 +120,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(732, 51);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label2.Location = new System.Drawing.Point(599, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 25);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "00:00:01";
             // 
             // label1
             // 
@@ -105,6 +153,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Iniciar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -124,61 +173,24 @@
             this.tpg_Nuevo.Text = "Cliente";
             this.tpg_Nuevo.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // navegador
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label2.Location = new System.Drawing.Point(599, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "00:00:01";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nombre";
-            // 
-            // lbel
-            // 
-            this.lbel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbel.Location = new System.Drawing.Point(272, 13);
-            this.lbel.Name = "lbel";
-            this.lbel.Size = new System.Drawing.Size(74, 21);
-            this.lbel.TabIndex = 1;
-            this.lbel.Text = "Comenzar";
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(432, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Tiempo";
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(609, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 21);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Restante";
+            this.navegador.Location = new System.Drawing.Point(770, 34);
+            this.navegador.MinimumSize = new System.Drawing.Size(20, 20);
+            this.navegador.Name = "navegador";
+            this.navegador.Size = new System.Drawing.Size(342, 409);
+            this.navegador.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1114, 460);
+            this.ClientSize = new System.Drawing.Size(1160, 465);
+            this.Controls.Add(this.navegador);
             this.Controls.Add(this.tabControl);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl.ResumeLayout(false);
             this.tpg_control.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -201,6 +213,7 @@
         private System.Windows.Forms.Label lbel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.WebBrowser navegador;
     }
 }
 
