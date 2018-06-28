@@ -1,0 +1,9 @@
+E:\mis proyectos\SCW\SCW\bin\Debug\SCW.exe.config
+E:\mis proyectos\SCW\SCW\bin\Debug\SCW.exe
+E:\mis proyectos\SCW\SCW\bin\Debug\SCW.pdb
+E:\mis proyectos\SCW\SCW\obj\Debug\SCW.csprojResolveAssemblyReference.cache
+E:\mis proyectos\SCW\SCW\obj\Debug\SCW.Form1.resources
+E:\mis proyectos\SCW\SCW\obj\Debug\SCW.Properties.Resources.resources
+E:\mis proyectos\SCW\SCW\obj\Debug\SCW.csproj.GenerateResource.Cache
+E:\mis proyectos\SCW\SCW\obj\Debug\SCW.exe
+E:\mis proyectos\SCW\SCW\obj\Debug\SCW.pdb
