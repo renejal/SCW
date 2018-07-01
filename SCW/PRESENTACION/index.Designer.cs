@@ -28,21 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tpg_control = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btn_iniciar2 = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lbel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lb_timeRest = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbox_1 = new System.Windows.Forms.ComboBox();
             this.tpg_Nuevo = new System.Windows.Forms.TabPage();
             this.navegador = new System.Windows.Forms.WebBrowser();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btn_pausa1 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tpg_control.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +68,7 @@
             // tpg_control
             // 
             this.tpg_control.BackColor = System.Drawing.Color.Green;
+            this.tpg_control.Controls.Add(this.panel2);
             this.tpg_control.Controls.Add(this.label6);
             this.tpg_control.Controls.Add(this.label5);
             this.tpg_control.Controls.Add(this.lbel);
@@ -70,6 +80,60 @@
             this.tpg_control.Size = new System.Drawing.Size(744, 409);
             this.tpg_control.TabIndex = 0;
             this.tpg_control.Text = "Control";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.btn_iniciar2);
+            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Location = new System.Drawing.Point(6, 92);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(732, 51);
+            this.panel2.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.DarkGreen;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox4.Location = new System.Drawing.Point(595, 7);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(92, 30);
+            this.textBox4.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.DarkGreen;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(417, 7);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(71, 30);
+            this.textBox3.TabIndex = 6;
+            // 
+            // btn_iniciar2
+            // 
+            this.btn_iniciar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_iniciar2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btn_iniciar2.Location = new System.Drawing.Point(267, 2);
+            this.btn_iniciar2.Name = "btn_iniciar2";
+            this.btn_iniciar2.Size = new System.Drawing.Size(71, 45);
+            this.btn_iniciar2.TabIndex = 1;
+            this.btn_iniciar2.Text = "Iniciar";
+            this.btn_iniciar2.UseVisualStyleBackColor = true;
+            this.btn_iniciar2.Click += new System.EventHandler(this.btn_iniciar2_Click);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(13, 15);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(208, 21);
+            this.comboBox2.TabIndex = 0;
             // 
             // label6
             // 
@@ -111,43 +175,42 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGreen;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.btn_pausa1);
+            this.panel1.Controls.Add(this.lb_timeRest);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbox_1);
             this.panel1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel1.Location = new System.Drawing.Point(6, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(732, 51);
             this.panel1.TabIndex = 0;
             // 
-            // label2
+            // lb_timeRest
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label2.Location = new System.Drawing.Point(599, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "00:00:01";
+            this.lb_timeRest.BackColor = System.Drawing.Color.DarkGreen;
+            this.lb_timeRest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lb_timeRest.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_timeRest.Location = new System.Drawing.Point(595, 9);
+            this.lb_timeRest.Name = "lb_timeRest";
+            this.lb_timeRest.Size = new System.Drawing.Size(92, 30);
+            this.lb_timeRest.TabIndex = 5;
             // 
-            // label1
+            // textBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.label1.Location = new System.Drawing.Point(422, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "00:00:01";
+            this.textBox1.BackColor = System.Drawing.Color.DarkGreen;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(417, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(71, 30);
+            this.textBox1.TabIndex = 4;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button1.Location = new System.Drawing.Point(267, 2);
+            this.button1.Location = new System.Drawing.Point(258, 1);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 45);
             this.button1.TabIndex = 1;
@@ -155,13 +218,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // cbox_1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 15);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(208, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbox_1.FormattingEnabled = true;
+            this.cbox_1.Location = new System.Drawing.Point(13, 15);
+            this.cbox_1.Name = "cbox_1";
+            this.cbox_1.Size = new System.Drawing.Size(208, 21);
+            this.cbox_1.TabIndex = 0;
             // 
             // tpg_Nuevo
             // 
@@ -181,6 +244,23 @@
             this.navegador.Size = new System.Drawing.Size(342, 409);
             this.navegador.TabIndex = 1;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btn_pausa1
+            // 
+            this.btn_pausa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pausa1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btn_pausa1.Location = new System.Drawing.Point(332, 1);
+            this.btn_pausa1.Name = "btn_pausa1";
+            this.btn_pausa1.Size = new System.Drawing.Size(71, 45);
+            this.btn_pausa1.TabIndex = 8;
+            this.btn_pausa1.Text = "Pausar";
+            this.btn_pausa1.UseVisualStyleBackColor = true;
+            this.btn_pausa1.Click += new System.EventHandler(this.btn_pausa1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +273,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl.ResumeLayout(false);
             this.tpg_control.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -205,15 +287,22 @@
         private System.Windows.Forms.TabPage tpg_control;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabPage tpg_Nuevo;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbox_1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.WebBrowser navegador;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btn_iniciar2;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox lb_timeRest;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btn_pausa1;
     }
 }
 
