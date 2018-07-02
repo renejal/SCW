@@ -1,11 +1,13 @@
 ﻿using SCW.PRESENTACION;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -45,42 +47,50 @@ namespace SCW
             {
                 Console.Write("error al iniciar sesion");
             }
+            
         }
         
         private void ObtenerDispositivosConectados()
         {
+            foreach (HtmlElement etiqueta in navegador.Document.All)
+            {
+                if (etiqueta.GetAttribute("classname").Contains("col-xs-10 span-fixed deviceName"))
+                {
+
+                    cbox_1.Items.Add(etiqueta.InnerText);
+
+                }
+            }
             
         }
-      
-         private void datos_cargados(object sender, EventArgs e)
+        private void navegarAcontrol()
+        {
+            HtmlElement btnControlTime = navegador.Document.GetElementById("net-control");
+            btnControlTime.InvokeMember("click");
+        }
+        private void datos_cargados(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 
             this.IniciarSesion();
-            
-                
-           
-           
+             //if(navegador.DocumentCompleted)
+           // this.navegarAcontrol();
 
-        }
-         
+        }  
          private void button1_Click(object sender, EventArgs e)
          {
-             //HtmlElement btnControlTime = navegador.Document.GetElementById("parental-controls");
-             //btnControlTime.InvokeMember("click");
+             
              this.timer1.Enabled = true;
              
          }
 
          private void btn_iniciar2_Click(object sender, EventArgs e)
          {
-             foreach (HtmlElement etiqueta in navegador.Document.All)
-             {
-                 if (etiqueta.GetAttribute("classname").Contains("switch icon-toggle-off"))
-                 {
-                     etiqueta.InvokeMember("click");
 
-                 }
-             } 
+             
+             
+           
+           
+ 
          }
          
          private void timer1_Tick(object sender, EventArgs e)
@@ -117,7 +127,7 @@ namespace SCW
          }
          private void CuentaRegresiva()
          {
-             if (s>0)
+             if (s>=0)
              {
                  this.lb_timeRest.Text = h + ":" + m + ":" + s;
                  s--;
@@ -141,6 +151,13 @@ namespace SCW
          private void btn_pausa1_Click(object sender, EventArgs e)
          {
              timer1.Stop();
+         }
+
+         private void btn_pausar2_Click(object sender, EventArgs e)
+         {
+            
+            // this.ObtenerDispositivosConectados();
+            
          }
 
 

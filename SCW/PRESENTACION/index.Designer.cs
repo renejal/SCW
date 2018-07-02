@@ -41,6 +41,7 @@
             this.lbel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_pausa1 = new System.Windows.Forms.Button();
             this.lb_timeRest = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,7 +49,7 @@
             this.tpg_Nuevo = new System.Windows.Forms.TabPage();
             this.navegador = new System.Windows.Forms.WebBrowser();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btn_pausa1 = new System.Windows.Forms.Button();
+            this.btn_pausar2 = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tpg_control.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,6 +86,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGreen;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.btn_pausar2);
             this.panel2.Controls.Add(this.textBox4);
             this.panel2.Controls.Add(this.textBox3);
             this.panel2.Controls.Add(this.btn_iniciar2);
@@ -119,7 +121,7 @@
             // 
             this.btn_iniciar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_iniciar2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btn_iniciar2.Location = new System.Drawing.Point(267, 2);
+            this.btn_iniciar2.Location = new System.Drawing.Point(258, -2);
             this.btn_iniciar2.Name = "btn_iniciar2";
             this.btn_iniciar2.Size = new System.Drawing.Size(71, 45);
             this.btn_iniciar2.TabIndex = 1;
@@ -186,6 +188,18 @@
             this.panel1.Size = new System.Drawing.Size(732, 51);
             this.panel1.TabIndex = 0;
             // 
+            // btn_pausa1
+            // 
+            this.btn_pausa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pausa1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btn_pausa1.Location = new System.Drawing.Point(332, 1);
+            this.btn_pausa1.Name = "btn_pausa1";
+            this.btn_pausa1.Size = new System.Drawing.Size(71, 45);
+            this.btn_pausa1.TabIndex = 8;
+            this.btn_pausa1.Text = "Pausar";
+            this.btn_pausa1.UseVisualStyleBackColor = true;
+            this.btn_pausa1.Click += new System.EventHandler(this.btn_pausa1_Click);
+            // 
             // lb_timeRest
             // 
             this.lb_timeRest.BackColor = System.Drawing.Color.DarkGreen;
@@ -249,17 +263,17 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btn_pausa1
+            // btn_pausar2
             // 
-            this.btn_pausa1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pausa1.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.btn_pausa1.Location = new System.Drawing.Point(332, 1);
-            this.btn_pausa1.Name = "btn_pausa1";
-            this.btn_pausa1.Size = new System.Drawing.Size(71, 45);
-            this.btn_pausa1.TabIndex = 8;
-            this.btn_pausa1.Text = "Pausar";
-            this.btn_pausa1.UseVisualStyleBackColor = true;
-            this.btn_pausa1.Click += new System.EventHandler(this.btn_pausa1_Click);
+            this.btn_pausar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pausar2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.btn_pausar2.Location = new System.Drawing.Point(332, -3);
+            this.btn_pausar2.Name = "btn_pausar2";
+            this.btn_pausar2.Size = new System.Drawing.Size(71, 45);
+            this.btn_pausar2.TabIndex = 9;
+            this.btn_pausar2.Text = "Pausar";
+            this.btn_pausar2.UseVisualStyleBackColor = true;
+            this.btn_pausar2.Click += new System.EventHandler(this.btn_pausar2_Click);
             // 
             // Form1
             // 
@@ -303,6 +317,7 @@
         private System.Windows.Forms.TextBox lb_timeRest;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btn_pausa1;
+        private System.Windows.Forms.Button btn_pausar2;
     }
 }
 
